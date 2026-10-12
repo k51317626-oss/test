@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
 <meta name="theme-color" content="#32070e">
 <title>RIE Bhopal Library - LRC NCERT</title>
+
+<!-- App Icon Links -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="manifest" href="manifest.json">
+
 <style>
 :root {
   /* Royal Dark Maroon & Gold Palette */
@@ -21,7 +27,7 @@
   --gold-soft: rgba(212, 175, 55, 0.16);
   --gold-border: rgba(212, 175, 55, 0.38);
 
-  /* Warm Royal Ivory/Parchment Backgrounds (NOT sterile white) */
+  /* Warm Royal Ivory/Parchment Backgrounds */
   --bg: #f6f3eb;
   --surface: #ffffff;
   --surface-warm: #fcfbfa;
@@ -42,36 +48,38 @@
 }
 
 [data-theme="dark"] {
-  --maroon: #63141f;
-  --maroon-deep: #1c0307;
-  --maroon-rich: #7e1a27;
-  --maroon-bright: #962232;
-  --maroon-soft: rgba(126, 26, 39, 0.22);
-  --maroon-glow: rgba(126, 26, 39, 0.45);
+  --maroon: #7e1a27;
+  --maroon-deep: #1a0307;
+  --maroon-rich: #962232;
+  --maroon-bright: #b82d41;
+  --maroon-soft: rgba(184, 45, 65, 0.22);
+  --maroon-glow: rgba(184, 45, 65, 0.45);
 
   --gold: #e5c158;
   --gold-bright: #fcd76b;
   --gold-subtle: #3a2e12;
   --gold-soft: rgba(229, 193, 88, 0.18);
-  --gold-border: rgba(229, 193, 88, 0.35);
+  --gold-border: rgba(229, 193, 88, 0.45);
 
   /* Deep rich warm dark background */
-  --bg: #0e0406;
+  --bg: #0d0305;
   --surface: #18080c;
-  --surface-warm: #1f0b10;
-  --surface-alt: #260e15;
+  --surface-warm: #200a10;
+  --surface-alt: #280e15;
   --surface-card: #18080c;
   --text: #faf4f5;
-  --text-muted: #ab979b;
-  --border: #321118;
-  --border-subtle: rgba(229, 193, 88, 0.12);
+  --text-muted: #c4b0b4;
+  --border: #381219;
+  --border-subtle: rgba(229, 193, 88, 0.18);
 
-  --nav-bg: rgba(24, 8, 12, 0.94);
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
-  --hero-shadow: 0 16px 42px rgba(0, 0, 0, 0.85);
+  --nav-bg: rgba(24, 8, 12, 0.96);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  --hero-shadow: 0 16px 42px rgba(0, 0, 0, 0.9);
 }
 
+/* Universal Selector */
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
@@ -131,7 +139,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   width: 48px; height: 48px;
   border-radius: 14px;
   background: #ffffff;
-  padding: 4px;
+  padding: 3px;
   display: grid; place-items: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
   border: 1.5px solid var(--gold-border);
@@ -141,6 +149,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   width: 100%; height: 100%;
   object-fit: contain;
   display: block;
+  border-radius: 10px;
 }
 .brand-text h1 { font-size: 17.5px; font-weight: 800; letter-spacing: -0.2px; line-height: 1.2; }
 .brand-text p { font-size: 11px; opacity: 0.95; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--gold-bright); }
@@ -160,7 +169,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
 
 .luxury-chronos {
   margin-top: 18px;
-  background: rgba(20, 2, 6, 0.52);
+  background: rgba(20, 2, 6, 0.58);
   border: 1.5px solid var(--gold-border);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -295,7 +304,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   transition: border-color .2s, box-shadow .2s;
 }
 .search-pill:focus-within {
-  border-color: var(--maroon);
+  border-color: var(--gold);
   box-shadow: 0 0 0 4px var(--maroon-soft);
 }
 .search-pill svg { color: var(--text-muted); width: 20px; height: 20px; }
@@ -370,10 +379,10 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   margin-bottom: 12px;
 }
 .sec-header h2 { font-size: 16px; font-weight: 800; letter-spacing: -0.2px; }
-.sec-header span { font-size: 12px; color: var(--maroon); font-weight: 700; }
+.sec-header span { font-size: 12px; color: var(--maroon-rich); font-weight: 700; }
 [data-theme="dark"] .sec-header span { color: var(--gold-bright); }
 
-/* 4-GATEWAY GRID (MULTI-COLOR PRESERVED) */
+/* 4-GATEWAY GRID */
 .gateway-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -393,7 +402,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   cursor: pointer;
   transition: transform .1s, border-color .15s;
 }
-.gateway-card:active { transform: scale(0.94); border-color: var(--maroon); }
+.gateway-card:active { transform: scale(0.94); border-color: var(--gold); }
 .gateway-icon-box {
   width: 42px; height: 42px;
   border-radius: 13px;
@@ -430,7 +439,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   justify-content: space-between;
   transition: transform .12s, border-color .12s;
 }
-.carousel-node:active { transform: scale(0.96); border-color: var(--maroon); }
+.carousel-node:active { transform: scale(0.96); border-color: var(--gold); }
 .carousel-node b { font-size: 13.5px; font-weight: 700; display: block; margin-top: 8px; }
 .carousel-node small { font-size: 11.5px; color: var(--text-muted); display: block; margin-top: 3px; }
 
@@ -539,7 +548,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
 }
 .chip-pill.active {
   background: var(--maroon);
-  border-color: var(--maroon);
+  border-color: var(--gold-border);
   color: #fff;
   box-shadow: 0 4px 12px var(--maroon-glow);
 }
@@ -612,9 +621,9 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   <div class="header">
     <div class="header-row">
       <div class="brand">
-        <!-- NCERT EMBEDDED LOGO -->
+        <!-- APP ICON.PNG INTEGRATED DIRECTLY -->
         <div class="logo-frame">
-          <img src="data:image/png;base64,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" alt="NCERT Logo">
+          <img src="icon.png" alt="RIE Bhopal Logo">
         </div>
         <div class="brand-text">
           <h1>RIE Bhopal LRC</h1>
@@ -626,6 +635,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
       </button>
     </div>
 
+    <!-- LUXURY CHRONOS WIDGET -->
     <div class="luxury-chronos">
       <div class="chronos-left">
         <div class="chronos-tag">
@@ -646,7 +656,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
           <span id="chronosDay">Monday</span>
         </span>
         <div class="chronos-date-full" id="chronosDate">12 October</div>
-        <div class="chronos-year-badge" id="chronosYear">Academic Session 2026-27</div>
+        <div class="chronos-year-badge" id="chronosYear">Academic Session</div>
       </div>
     </div>
   </div>
@@ -654,13 +664,12 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   <div class="search-anchor">
     <div class="search-pill">
       <svg><use href="#search"/></svg>
-      <input id="appSearch" type="search" placeholder="Search Koha OPAC, N-LIST, Papers, Syllabi…" autocomplete="off">
+      <input id="appSearch" type="search" placeholder="Search Koha OPAC, Magzter, Papers, Syllabi…" autocomplete="off">
       <button class="clear-btn" id="clearSearch"><svg><use href="#close"/></svg></button>
     </div>
   </div>
 
   <div class="app-container">
-    <!-- Search Results View -->
     <div id="searchZone" style="display:none">
       <div class="section">
         <div class="sec-header"><h2>Search Matches</h2><span id="matchStat"></span></div>
@@ -668,9 +677,7 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
       </div>
     </div>
 
-    <!-- Main Dashboard Stream -->
     <div id="mainDashboard">
-      <!-- HERO OPAC LAUNCHER -->
       <div class="hero-card" data-url="http://13.126.40.108:8001/">
         <div class="hero-left">
           <div class="hero-icon"><svg><use href="#book"/></svg></div>
@@ -682,7 +689,6 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
         <span class="hero-btn">Search Books</span>
       </div>
 
-      <!-- PINNED FAVORITES -->
       <div class="section" id="favSection" style="display:none">
         <div class="sec-header"><h2>Pinned Services</h2><span>Quick Access</span></div>
         <div class="native-list" id="favContainer"></div>
@@ -698,7 +704,6 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
         <div class="carousel-track" id="digitalTrack"></div>
       </div>
 
-      <!-- STUDENT DOWNLOAD CORNER -->
       <div class="section">
         <div class="sec-header"><h2>Student Corner</h2><span>Papers & Syllabus</span></div>
         <div class="native-list" id="studentExamList"></div>
@@ -769,38 +774,49 @@ svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width:
   </div>
 </section>
 
+<!-- BOTTOM DOCKED DOCKBAR: OER & Koha Links -->
 <nav class="dock-bar" aria-label="Navigation">
   <button class="dock-btn active" data-view="home"><svg><use href="#home"/></svg><span>Home</span></button>
   <button class="dock-btn" data-view="explore"><svg><use href="#grid"/></svg><span>Explore</span></button>
   <button class="dock-btn" data-url="http://13.126.40.108:8001/"><svg><use href="#book"/></svg><span>OPAC</span></button>
-  <button class="dock-btn" data-url="https://nlist.inflibnet.ac.in/veresources.php"><svg><use href="#globe"/></svg><span>N-LIST</span></button>
+  <button class="dock-btn" data-url="https://riebhopallibrary.joomla.com/index.php/new-e-textbook"><svg><use href="#textbook"/></svg><span>OER</span></button>
   <button class="dock-btn" data-view="contact"><svg><use href="#phone"/></svg><span>Contact</span></button>
 </nav>
 
 <script>
 var J = "https://riebhopallibrary.joomla.com/";
 
-/* Vibrant Multi-Color Icon Matrix (Preserved exactly as requested) */
-var TINTS = {
-  b: ["#e4f0fc", "#0857a6"], // Classic Blue
-  g: ["#e3f6ed", "#0e7f58"], // Emerald Green
-  p: ["#f1ebfc", "#663ecb"], // Regal Purple
-  o: ["#fef1e2", "#c95b04"], // Warm Amber
-  t: ["#e0f5f7", "#097787"], // Fresh Teal
-  r: ["#fce8ef", "#bf1f57"]  // Rose Red
-};
+function getIconBackground(colorType, isDark) {
+  var lightMap = {
+    b: ["#e4f0fc", "#0857a6"],
+    g: ["#e3f6ed", "#0e7f58"],
+    p: ["#f1ebfc", "#663ecb"],
+    o: ["#fef1e2", "#c95b04"],
+    t: ["#e0f5f7", "#097787"],
+    r: ["#fce8ef", "#bf1f57"]
+  };
+  var darkMap = {
+    b: ["rgba(8, 87, 166, 0.25)", "#60a5fa"],
+    g: ["rgba(14, 127, 88, 0.25)", "#34d399"],
+    p: ["rgba(102, 62, 203, 0.25)", "#a78bfa"],
+    o: ["rgba(201, 91, 4, 0.25)", "#fbbf24"],
+    t: ["rgba(9, 119, 135, 0.25)", "#2dd4bf"],
+    r: ["rgba(191, 31, 87, 0.25)", "#f472b6"]
+  };
+  return (isDark ? darkMap[colorType] : lightMap[colorType]) || lightMap.b;
+}
 
 var REPO = [
   {g:"Portals", i:"book", c:"b", t:"Koha Web OPAC", d:"Search books catalogue (Local IP)", u:"http://13.126.40.108:8001/"},
   {g:"Portals", i:"db", c:"g", t:"DSpace Repository", d:"Institutional archives, dissertations & theses", u:"http://13.126.40.108:8080/jspui/"},
   {g:"Portals", i:"globe", c:"p", t:"ONOS Access", d:"One Nation One Subscription National Portal", u:"https://www.onos.gov.in/ums/check-access"},
-  {g:"Portals", i:"globe", c:"t", t:"N-LIST INFLIBNET", d:"3,00,000+ e-books & 6,000+ e-journals", u:"https://nlist.inflibnet.ac.in/veresources.php"},
+  {g:"Portals", i:"journal", c:"o", t:"E-Newspapers & Magazines", d:"Magzter digital newsstand (Global & Indian)", u:"https://www.magzter.com/"},
   
   {g:"Digital", i:"textbook", c:"t", t:"Pearson E-Library", d:"Pearson prescribed textbooks portal", u:"https://elibrary.in.pearson.com"},
   {g:"Digital", i:"book", c:"o", t:"Kopykitab RIE", d:"Hindi & English textbooks (Remote access)", u:"http://riebhopal.kopykitab.com"},
   {g:"Digital", i:"lock", c:"g", t:"DELNET Portal", d:"Inter-Library loan network & discovery catalogue", u:"http://164.100.247.26/"},
   {g:"Digital", i:"journal", c:"r", t:"Sage Journals", d:"Education collection peer-reviewed journals", u:"https://journals.sagepub.com/"},
-  {g:"Digital", i:"textbook", c:"b", t:"E-Textbooks & AR/VR", d:"NCERT and curriculum digital textbooks", u:J+"index.php/new-e-textbook"},
+  {g:"Digital", i:"textbook", c:"b", t:"E-Textbooks & OER", d:"NCERT and curriculum digital open textbooks", u:J+"index.php/new-e-textbook"},
   {g:"Digital", i:"book", c:"p", t:"Open E-Books", d:"Open access electronic books collection", u:J+"index.php/e-library/open-e-book-collection"},
   
   {g:"Student", i:"file", c:"b", t:"Question Papers", d:"Previous years' B.Ed, M.Ed exam question papers", u:J+"index.php/question-paper"},
@@ -830,6 +846,8 @@ syncIcon(theme);
 function syncIcon(t) {
   var icon = $("themeIcon");
   if(icon) icon.innerHTML = '<use href="#' + (t === "dark" ? "sun" : "moon") + '"/>';
+  var metaTheme = document.querySelector('meta[name="theme-color"]');
+  if(metaTheme) metaTheme.setAttribute("content", t === "dark" ? "#1a0307" : "#32070e");
 }
 
 $("themeSwitch").addEventListener("click", function() {
@@ -837,6 +855,8 @@ $("themeSwitch").addEventListener("click", function() {
   document.documentElement.setAttribute("data-theme", now);
   localStorage.setItem("rie_theme_maroon_lux", now);
   syncIcon(now);
+  renderApp();
+  if($("appSearch").value.trim().length > 0) runSearch();
 });
 
 function updateChronosClock() {
@@ -845,23 +865,26 @@ function updateChronosClock() {
   var m = d.getMinutes();
   var s = d.getSeconds();
   var day = d.getDay();
+  var year = d.getFullYear();
 
   var period = h >= 12 ? "PM" : "AM";
   var hr12 = h % 12 || 12;
-  var min = m < 10 ? "0" + m : m;
-  var sec = s < 10 ? "0" + s : s;
+  var hrPad = hr12 < 10 ? "0" + hr12 : hr12;
+  var minPad = m < 10 ? "0" + m : m;
+  var secPad = s < 10 ? "0" + s : s;
 
-  $("chronosHour").textContent = hr12;
-  $("chronosMin").textContent = min;
-  $("chronosSec").textContent = ":" + sec;
+  $("chronosHour").textContent = hrPad;
+  $("chronosMin").textContent = minPad;
+  $("chronosSec").textContent = ":" + secPad;
   $("chronosPeriod").textContent = period;
 
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   $("chronosDay").textContent = days[day];
-  $("chronosDate").textContent = d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+  $("chronosDate").textContent = d.getDate() + " " + months[d.getMonth()] + " " + year;
+  $("chronosYear").textContent = "Session " + year + "-" + (year + 1).toString().slice(-2);
 
-  // Operation Check: Mon - Fri: 09:00 AM - 05:30 PM (540 to 1050 mins)
+  // Operations: Mon - Fri: 09:00 AM - 05:30 PM (540 to 1050 mins)
   var isWeekday = day >= 1 && day <= 5;
   var totalMins = h * 60 + m;
   var isOpen = isWeekday && (totalMins >= 540 && totalMins < 1050);
@@ -896,16 +919,17 @@ function sanitize(str) {
 function launch(url) { window.location.href = url; }
 
 function getIcon(item) {
-  var t = TINTS[item.c] || TINTS.b;
+  var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  var t = getIconBackground(item.c, isDark);
   return '<div class="row-icon" style="background:'+t[0]+';color:'+t[1]+'"><svg><use href="#'+item.i+'"/></svg></div>';
 }
 
 function createRow(item, index) {
   var isFav = pinned.indexOf(index) > -1;
-  return '<div class="native-row" role="button" tabindex="0" data-url="'+item.u+'">' +
+  return '<div class="native-row" role="button" tabindex="0" data-url="' + item.u + '">' +
     getIcon(item) +
-    '<div class="row-text"><b>'+sanitize(item.t)+'</b><small>'+sanitize(item.d)+'</small></div>' +
-    '<button class="pin-btn'+(isFav ? " active" : "")+'" data-pin="' + index + '" aria-label="Favorite"><svg><use href="#star"/></svg></button>' +
+    '<div class="row-text"><b>' + sanitize(item.t) + '</b><small>' + sanitize(item.d) + '</small></div>' +
+    '<button class="pin-btn' + (isFav ? " active" : "") + '" data-pin="' + index + '" aria-label="Favorite"><svg><use href="#star"/></svg></button>' +
     '<svg class="arrow-icon"><use href="#chevron"/></svg></div>';
 }
 
@@ -918,22 +942,24 @@ function renderGroup(group) {
 }
 
 function renderApp() {
-  // 1. Gateways (Full multi-color preserved)
+  var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+
+  // 1. Gateways
   $("gatewayGrid").innerHTML = REPO.slice(0, 4).map(function(item) {
-    var tint = TINTS[item.c] || TINTS.b;
-    var name = item.t.replace(" Access", "").replace(" INFLIBNET", "").trim();
-    return '<button class="gateway-card" data-url="'+item.u+'">' +
-      '<div class="gateway-icon-box" style="background:'+tint[0]+';color:'+tint[1]+'"><svg><use href="#'+item.i+'"/></svg></div>' +
-      '<span>'+sanitize(name)+'</span></button>';
+    var tint = getIconBackground(item.c, isDark);
+    var name = item.t.replace(" Access", "").replace(" National Portal", "").trim();
+    return '<button class="gateway-card" data-url="' + item.u + '">' +
+      '<div class="gateway-icon-box" style="background:' + tint[0] + ';color:' + tint[1] + '"><svg><use href="#' + item.i + '"/></svg></div>' +
+      '<span>' + sanitize(name) + '</span></button>';
   }).join("");
 
-  // 2. Carousel (Full multi-color preserved)
+  // 2. Carousel
   $("digitalTrack").innerHTML = REPO.filter(function(x){ return x.g === "Digital"; }).map(function(item) {
-    var tint = TINTS[item.c] || TINTS.b;
-    return '<button class="carousel-node" data-url="'+item.u+'">' +
-      '<div><div class="gateway-icon-box" style="background:'+tint[0]+';color:'+tint[1]+'"><svg><use href="#'+item.i+'"/></svg></div>' +
-      '<b>'+sanitize(item.t)+'</b></div>' +
-      '<small>'+sanitize(item.d.split(" (")[0])+'</small></button>';
+    var tint = getIconBackground(item.c, isDark);
+    return '<button class="carousel-node" data-url="' + item.u + '">' +
+      '<div><div class="gateway-icon-box" style="background:' + tint[0] + ';color:' + tint[1] + '"><svg><use href="#' + item.i + '"/></svg></div>' +
+      '<b>' + sanitize(item.t) + '</b></div>' +
+      '<small>' + sanitize(item.d.split(" (")[0]) + '</small></button>';
   }).join("");
 
   // 3. Lists
@@ -955,12 +981,11 @@ function renderExplore() {
   var cats = ["", "Portals", "Digital", "Student", "Research", "About"];
   $("categoryChips").innerHTML = cats.map(function(c) {
     var active = (c === currentCat) ? " active" : "";
-    return '<button class="chip-pill'+active+'" data-tag="'+c+'">'+(c || "All Resources")+'</button>';
+    return '<button class="chip-pill' + active + '" data-tag="' + c + '">' + (c || "All Resources") + '</button>';
   }).join("");
   $("allServicesList").innerHTML = renderGroup(currentCat);
 }
 
-/* Instant Search */
 function runSearch() {
   var q = $("appSearch").value.toLowerCase().trim();
   $("clearSearch").classList.toggle("show", q.length > 0);
@@ -982,7 +1007,7 @@ function runSearch() {
     }
   });
 
-  $("matchResults").innerHTML = matches || '<div class="empty-box">No library resources found for "'+sanitize(q)+'".</div>';
+  $("matchResults").innerHTML = matches || '<div class="empty-box">No library resources found for "' + sanitize(q) + '".</div>';
   $("matchStat").textContent = total + " items";
 }
 
